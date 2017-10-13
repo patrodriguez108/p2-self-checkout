@@ -95,7 +95,13 @@ https
 Sinatra
 
 - What is sinatra?
+
+Sinatra is a DSL (domain specific language) that works with Ruby to create web applications.
+
 - What is the simplest sinatra app we could make?
+
+? The simplest Sinatra web app that we can make would involve two files: one config, and one file that includes the logic for models, controllers, and views.
+
 - What is the underlying middleware that Sinatra sits on top of?
 - What does this middleware do for us?
 - Before responding to an HTTP request, we may need to reference or use various forms of data and state that are either managed by the server or included in the client’s request. Please give a few examples.
