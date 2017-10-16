@@ -103,8 +103,25 @@ Sinatra is a DSL (domain specific language) that works with Ruby to create web a
 ? The simplest Sinatra web app that we can make would involve two files: one config, and one file that includes the logic for models, controllers, and views.
 
 - What is the underlying middleware that Sinatra sits on top of?
+
+Rack
+
 - What does this middleware do for us?
+
+?
+
 - Before responding to an HTTP request, we may need to reference or use various forms of data and state that are either managed by the server or included in the client’s request. Please give a few examples.
+
+? We could use instance variables that access different portions of data that are within the server. These portions of data can be accessed from a get request using the params
+
 - What is the relationship between the erb templates and the HTTP response body?
+
+? The erb template includes HTML and Ruby data, but the HTTP response body is that data converted into text format
+
 - What is the difference between redirect and rendering a template?
+
+? Redirect works as a get request to a route that is already defined while rendering a template converts a file into text and displays that data as text for a webpage
+
 - What is a method override and why do we need to do it?
+
+? A method overrid
