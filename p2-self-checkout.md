@@ -208,6 +208,105 @@ It is not enough to show/hide buttons because it would be possible for users to 
 
 We fully secure an application by placing authorize methods within routes that should remain private and only for specific users.
 
+<h1>HTML</h1>
+
+- What is HTML?
+
+HTML is a language that is used as a standard for rendering web pages and web apps.
+
+- Why do we use it?
+
+We use HTML so that we may be able to view our web pages and web apps
+
+- What is the effect of adding a label to various form elements?
+
+The effect of adding a label to various form elements is allowing users to know what information they would need to fill in
+
+- How and why would you use the alt attribute?
+
+? We would use the alt attribute by adding alt and setting it to the words that we would want to display. We would use the alt attribute as alternative text that a user may see if other text may be unrenderable
+
+- How and why would you use the tabindex attribute?
+
+? One would use the tabindex attribute by adding it to a tag on a form and assigning a value to it. We would use it so as to make entering data easier for a user, so that when a user inputs information they may get to the next portion of the form by pressing tab.
+
+- How and why would you use the title attribute?
+
+? One would use the title attribute by adding the title to a tag and assigning the value. We would use the title attribute to specify extra information
+
+- What are common use cases for the <meta> element?
+
+? The <meta> element is used for explaining what data is used for using data
+
+- What is the difference in how inline and block elements display?
+
+Inline elements do not start on a new line and only take up as much width as necessary, while block elements always start on a new line and take up as much width as there is available.
+
+- What are some common inline tags?
+
+<span>, <a>, <img>
+
+- What are some common block level tags?
+
+<div>, header such as <h1>, <p>, <form>
+
+- What are data- attributes for?
+
+? The data- attributes are for defining a class of information that will be passed between HTML and the DOM
+
+- What are some common html attributes and how do you write them?
+
+href="[path]"
+
+name="[name]"
+
+src="[source]"
+
+- What is the purpose of the form element's action attribute?
+
+The form element's action attribute specifies the route to which the form's data will be taken to once the form is submitted.
+
+- What is the purpose of the form element's method attribute?
+
+The form element's method attribute defines what type of request is being made once the form is submitted.
+
+- When do you use the different input types?
+
+We would use type="text" when the input field is text that the user will be entering; type="password" is for when the user will be entering a password; type="hidden" is for when the data will need to be sent by a request type other than a GET or a POST, and is used as a way to redefine the form's method attribute.
+
+- What is meant by semantic markup?
+
+What is meant by semantic markup is that the code that is written in HTML is written within the proper context, similarly to proper grammar within a spoken language.
+
+- What are the difference between some of the common container html elements?
+
+? Some container elements are inline and some are block
+
+- What does it mean for HTML to be valid?
+
+Some HTML tags might not be supported, depending on the version. If the version of HTML that is being used does not support a tag that is written, then that tag is not valid.
+
+- Why is it important that we write valid html?
+
+? It is important that we write valid HTML so that we might be able to render the web page or the web app without any issues
+
+<h1>CSS</h1>
+
+- What is CSS?
+- What does it allow us to do?
+- What is the box model?
+- How is the box size calculated?
+- What is the difference between margin and padding?
+- Which box model properties apply to block, inline, inline-block elements?
+- What is the default positioning for elements?
+- What are the differences in static, relative, absolute, and fixed positioning?
+- How do floats effect positioning?
+- What are the benefits of responsive design?
+- What is the relationship between relatively positioned and absolutely positioned elements?
+- How do you define inline styles?
+- Why is it best to avoid inline styles?
+- How do we link an external style sheet?
+- What are some common css selectors?
 
 <h1>Javascript</h1>
 
@@ -347,3 +446,26 @@ Bind returns a new function, allowing you to pass in a this array and any number
 - What is variable shadowing?
 
 ? Variable shadowing is when a variable within one scope has the same name as a variable within another scope.
+
+<h1>jQuery</h1>
+
+- What is jQuery?
+- What does it allow us to do?
+- What are the common types of selectors we can use?
+
+<h1>Event Handling</h1>
+
+- What are events?
+- How/Why do we bind events?
+- What is event bubbling?
+- What is event delegation?
+- Why do we need to delegate events?
+
+<h1>AJAX</h1>
+
+- What is AJAX?
+- What are the benefits of an AJAX request vs reloading the whole page?
+- What is the $.ajax() jQuery method actually doing for us?
+- What are the common options that can be sent to the $.ajax() jQuery method and what are they used for?
+- When does the done / error callback actually execute?
+- How do we know that we've made an ajax request in our controller?
