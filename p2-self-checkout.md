@@ -92,7 +92,7 @@ https
 
 [google scheme]
 
-<b>Sinatra</b>
+<b><h1>Sinatra</h1></b>
 
 - What is sinatra?
 
@@ -126,7 +126,7 @@ Rack
 
 ? A method override is used to perform a different function aside from the standard functionaliy. We would need to use it when using BCrypt so that we might be able to authenticate a user's password.
 
-<b>Sessions</b>
+<b><h1>Sessions</h1></b>
 
 - What are sessions?
 - Why do we need to use sessions?
@@ -135,7 +135,7 @@ Rack
 - How is the session passed from the server to the client?
 
 
-<b>Javascript</b>
+<h1>Javascript</h1>
 
 - Why is accessing a property with bracket notation more appropriate than dot notation?
 
