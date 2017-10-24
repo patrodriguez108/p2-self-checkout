@@ -186,6 +186,28 @@ We write two methods: a setter and a getter. The setter method is called upon on
 
 ? The getter method is called upon when a user logs in, using authintication. The string version of the hashed password that is saved in the database is placed within the Password.new function, which can only take in string versions of a hashed password. The plain text is compared with this hashed password using a double equal comparison that works as a method override from its standard usage.
 
+<h1>Authorization</h1>
+
+- What is authorization?
+
+Authorization is the active prevention of users from accessing data that is not meant for them.
+
+- What is the difference between authorization and authentication?
+
+Authentication is used to ensure that a user has the right to data that is stored within the database. Authorization is used to ensure that that user accesses that data only and not other users' data.
+
+- Why do we use authorization?
+
+We use authorization to ensure privacy for users.
+
+- Why is it not enough to just show / hide buttons in an application?
+
+It is not enough to show/hide buttons because it would be possible for users to manually enter the route to get to that data.
+
+- How do we fully secure an application?
+
+We fully secure an application by placing authorize methods within routes that should remain private and only for specific users.
+
 
 <h1>Javascript</h1>
 
