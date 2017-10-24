@@ -234,9 +234,9 @@ The effect of adding a label to various form elements is allowing users to know 
 
 ? One would use the title attribute by adding the title to a tag and assigning the value. We would use the title attribute to specify extra information
 
-- What are common use cases for the <meta> element?
+- What are common use cases for the meta element?
 
-? The <meta> element is used for explaining what data is used for using data
+? The meta element is used for explaining what data is used for using data
 
 - What is the difference in how inline and block elements display?
 
@@ -248,7 +248,7 @@ span, a, img
 
 - What are some common block level tags?
 
-<div>, header such as h1, p, form
+div, header such as h1, p, form
 
 - What are data- attributes for?
 
