@@ -1,4 +1,4 @@
-<b>HTTP</b>
+<b><h1>HTTP</h1></b>
 
 - What are the common request types associated with RESTful routing?
 
