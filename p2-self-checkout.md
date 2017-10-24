@@ -110,21 +110,24 @@ Rack
 
 ? This middleware enables the app to require each of the files so that within each file we don't need to specify which files depend on which other files, which in turn enables the app to function properly.
 
+[getting HTTP requests and parsing the HTTP requests and making the responses]
+
 - Before responding to an HTTP request, we may need to reference or use various forms of data and state that are either managed by the server or included in the client’s request. Please give a few examples.
 
-? We could use instance variables that access different portions of data that are within the server. These portions of data can be accessed from a get request using the params
+We could use instance variables that access different portions of data that are within the server. These portions of data can be accessed from a get request using the params
 
 - What is the relationship between the erb templates and the HTTP response body?
 
-? The erb template includes HTML and Ruby data, but the HTTP response body is that data converted into text format
+The erb template includes HTML and Ruby data, but the HTTP response body is that data converted into text format
 
 - What is the difference between redirect and rendering a template?
 
-? Redirect works as a get request to a route that is already defined while rendering a template converts a file into text and displays that data as text for a webpage
+Redirect works as a get request to a route that is already defined while rendering a template converts a file into text and displays that data as text for a webpage
 
 - What is a method override and why do we need to do it?
 
-? A method override is used to perform a different function aside from the standard functionaliy. We would need to use it when using BCrypt so that we might be able to authenticate a user's password. We would also use it when using a form that upon submission would make a request other than a GET or a POST
+We would also use it when using a form that upon submission would make a request other than a GET or a POST
+
 
 <h1>Sessions</h1>
 
@@ -132,9 +135,13 @@ Rack
 
 ? Sessions are cookies that enable certain data to be accessible by certain users.
 
+[Sessions are stored-in cookies so that we can send that data back and forth so that we can identify data for that certain user]
+
 - Why do we need to use sessions?
 
 ? We need to use sessions so that we can enable users to obtain the data that is unique to them.
+
+[Giving the HTTP request some state saying which user is making the request]
 
 - What types of data can be stored in session?
 
@@ -146,7 +153,7 @@ Rack
 
 - How is the session passed from the server to the client?
 
-? The session is passed from the server to the client by
+? The session is passed from the server to the client by using the cookie in the headers
 
 <h1>Authentication</h1>
 
@@ -180,7 +187,7 @@ We should never store plain text passwords within the database because that woul
 
 We write two methods: a setter and a getter. The setter method is called upon on registration. It takes the plain text password and creates a new password object by adding a salt to the plain text password and hashing it. That hashed password is then stored as a string within the database.
 
-? The getter method is called upon when a user logs in, using authintication. The string version of the hashed password that is saved in the database is placed within the Password.new function, which can only take in string versions of a hashed password. The plain text is compared with this hashed password using a double equal comparison that works as a method override from its standard usage.
+The getter method is called upon when a user logs in, using authintication. The string version of the hashed password that is saved in the database is placed within the Password.new function, which can only take in string versions of a hashed password. The plain text is compared with this hashed password using a double equal comparison that works as a method override from its standard usage.
 
 - When we authenticate a user, how are we able to compare the plaintext password with the encrypted one stored in the database?
 
@@ -254,6 +261,8 @@ div, header such as h1, p, form
 
 ? The data- attributes are for defining a class of information that will be passed between HTML and the DOM
 
+[custome attributes that we can make and put in any HTML tag; specialized HTML attributes that a user can input; similar to writing variables in HTML]
+
 - What are some common html attributes and how do you write them?
 
 href="[path]"
@@ -307,6 +316,8 @@ The box model is a principle that is followed when using CSS. It follows the tho
 - How is the box size calculated?
 
 ? The box size is calculated using pixels
+
+[uses pixels; box-size calculated using padding and border-size; box-size accounts everything that needs to be inputted]
 
 - What is the difference between margin and padding?
 
@@ -371,17 +382,29 @@ We link an exzternal style sheet using a link tag that includes the path of the 
 ? One can add a property to an object by defining a parameter and having that parameter equal to a value
 
 - How do you change the value of an object's property?
+
+Set it equal to the new value
+
 - How do you remove a property from an object?
+
+[Something like hash.delete]
+
 - How do you write an if statement?
 
 One writes an if statement by writing "if" before the condition written in parentheses and afterwards adding curly braces, in which one would include the action to perform if the condition is met
 
 - How do you write a switch statement?
+
+Similar to a case statement, but only operates on integers
+
 - How do you write a for loop?
 
 One writes a for loop by writing "for" and afterwards writing in parentheses a defined variable which will work as the starting point; and comparing that variable to a determined length; and incrementing that variable until that variable reaches the determined length.
 
 - How do you write a for..in loop?
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in
+
 - What is the difference between declaring a variable using and not using var?
 
 ? Declaring a variable not using var will confuse Javascript because the variable is not defined; one would need to use var so that Javascript knows that we are defining a variable.
@@ -390,11 +413,13 @@ One writes a for loop by writing "for" and afterwards writing in parentheses a d
 
 - What happens when we try to access property of an object that doesn't exist?
 
-? We would end up getting a return that is undefined
+ We would end up getting a return that is undefined
 
 - What is variable hoisting?
 
 ? Variable hoisting is defining a variable as null before redefining it within a different scope so that we might be able to access that variable within any function written in the program
+
+[]
 
 - How can we split a string into segments in javascript?
 
@@ -416,13 +441,17 @@ The function is then followed by curly braces, in which we would nest the logic 
 
 ? The inheritance system that Javascript uses is that we would first need to define an object and its attributes. After defining that object, we would write prototype functions that we might be able to call with each instance of that object.
 
+[prototypal]
+
 - How does property lookup work in JavaScript?
 
-? In Javascript we may lookup a property using dot notation (object.propertyName) or bracket notation (object['propertyName']. This is highly similary to accessing the value of a hash in Ruby.
+In Javascript we may lookup a property using dot notation (object.propertyName) or bracket notation (object['propertyName']. This is highly similary to accessing the value of a hash in Ruby.
 
 - What is the relationship between a function's prototype and objects created with the function?
 
 ? The objects created with the function are meant to be unique to the instances of each specific object, while the function's prototype are meant to be the same function that will be ran with each instance.
+
+[if within the prototype the function will be ran once with each]
 
 - How do we define a constructor function?
 
