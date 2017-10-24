@@ -108,7 +108,7 @@ Rack
 
 - What does this middleware do for us?
 
-?
+? This middleware enables the app to require each of the files so that within each file we don't need to specify which files depend on which other files, which in turn enables the app to function properly.
 
 - Before responding to an HTTP request, we may need to reference or use various forms of data and state that are either managed by the server or included in the client’s request. Please give a few examples.
 
@@ -124,7 +124,7 @@ Rack
 
 - What is a method override and why do we need to do it?
 
-? A method overrid
+? A method override is used to perform a different function aside from the standard functionaliy. We would need to use it when using BCrypt so that we might be able to authenticate a user's password.
 
 
 Javascript
@@ -158,23 +158,110 @@ One writes a for loop by writing "for" and afterwards writing in parentheses a d
 [Javascript will create that variable with global scope; var will create variable within the scope of that function or any functions nested within that function]
 
 - What happens when we try to access property of an object that doesn't exist?
+
+? We would end up getting a return that is undefined
+
 - What is variable hoisting?
+
+? Variable hoisting is defining a variable as null before redefining it within a different scope so that we might be able to access that variable within any function written in the program
+
 - How can we split a string into segments in javascript?
+
+? We can split a string into segments in javascript using the prototyle method ".split()"
+
 - How do you write a function?
+
+? There are a few ways to write a function. One way is:
+
+function FunctionName()
+
+Another is:
+
+var functionName = function()
+
+The function is then followed by curly braces, in which we would nest the logic that the function performs. If we are expecting a return, we must specify what we are returning by writing "return" in front of that which we want to be returned.
+
 - What is the inheritance system that JavaScript uses?
+
+? The inheritance system that Javascript uses is that we would first need to define an object and its attributes. After defining that object, we would write prototype functions that we might be able to call with each instance of that object.
+
 - How does property lookup work in JavaScript?
+
+? In Javascript we may lookup a property using dot notation (object.propertyName) or bracket notation (object['propertyName']. This is highly similary to accessing the value of a hash in Ruby.
+
 - What is the relationship between a function's prototype and objects created with the function?
+
+? The objects created with the function are meant to be unique to the instances of each specific object, while the function's prototype are meant to be the same function that will be ran with each instance.
+
 - How do we define a constructor function?
+
+? A constructor function is defined similarly to an object literal. We would define the function like a standard function, with parameters defined as variables. Within the curly braces we would define each parameter as attributes using "this." For example:
+
+function(name, age, favoriteCartoon) {
+  this.name = name;
+  this.age = age,
+  this.favoriteCartoon = favoriteCartoon
+};
+
 - How do you add functions to a constructor function's prototype?
+
+? One would add functions to a constructor function's prototype by defining an attribute and having it equalled to a callback function. For example:
+
+function(name, age, favoriteCartoon) {
+  this.name = name;
+  this.age = age,
+  this.favoriteCartoon = favoriteCartoon;
+  this.favoriteIceCreamFlavor = function(flavor) {
+    return flavor
+  }
+};
+
 - What is an object literal?
+
+? An object literal is an object that is defined in simplest terms. It is set to a variable, and it is equal to curly braces, and within the curly braces are the object's attributes that are defined in key-value pairs.
+
 - When do we use an object literal vs a contructor function?
+
+? We would use an object literal if we just needed that one object at a given moment. We would use constructor functions if we would need to make multiple instances of that object.
+
 - What is a callback function and how do we use it?
+
+? A callback function is an anonymous function, or unnamed function, that we would use to perform specific tasks within a named function.
+
 - What is a closure and how do we use it?
+
+? (What) A closure is the combination of a function and the lexical environment within which that function was declared.
+
 - How is scope determined in JavaScript?
+
+? Scope is determined in javascript by what data is accessible by which function.
+
 - What is a higher-order function?
+
+? A higher-order function is a function that takes a function as a parameter and may return a function as a result
+
 - What does it mean for a function to be a 'first-class citizen'?
+
+? A function that is a first-class citizen is a function that may be accessed by anything within the program
+
 - Can you write a function that returns a function?
+
+? Yes, these are called higher-order functions
+
 - What type of scope is used JavaScript?
+
+? Local and global
+
 - What is this?
+
+? This is similar to self in Ruby; this is referencing the object in which the current scope is within
+
 - What are the methods call, apply, and bind used for?
+
+? Call invokes the function and allows you to pass in arguments one by one.
+Apply invokes the function and allows you to pass in arguments as an array.
+Bind returns a new function, allowing you to pass in a this array and any number of arguments.
+
 - What is variable shadowing?
+
+? Variable shadowing is when a variable within one scope has the same name as a variable within another scope.
