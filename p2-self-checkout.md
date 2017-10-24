@@ -244,11 +244,11 @@ Inline elements do not start on a new line and only take up as much width as nec
 
 - What are some common inline tags?
 
-<span>, <a>, <img>
+span, a, img
 
 - What are some common block level tags?
 
-<div>, header such as <h1>, <p>, <form>
+<div>, header such as h1, p, form
 
 - What are data- attributes for?
 
