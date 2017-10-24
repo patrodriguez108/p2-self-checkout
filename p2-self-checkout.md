@@ -1,4 +1,4 @@
-HTTP
+<b>HTTP</b>
 
 - What are the common request types associated with RESTful routing?
 
@@ -92,7 +92,7 @@ https
 
 [google scheme]
 
-Sinatra
+<b>Sinatra</b>
 
 - What is sinatra?
 
@@ -126,8 +126,16 @@ Rack
 
 ? A method override is used to perform a different function aside from the standard functionaliy. We would need to use it when using BCrypt so that we might be able to authenticate a user's password.
 
+<b>Sessions</b>
 
-Javascript
+- What are sessions?
+- Why do we need to use sessions?
+- What types of data can be stored in session?
+- What types of things should we not store in session?
+- How is the session passed from the server to the client?
+
+
+<b>Javascript</b>
 
 - Why is accessing a property with bracket notation more appropriate than dot notation?
 
