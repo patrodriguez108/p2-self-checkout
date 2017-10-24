@@ -1,4 +1,4 @@
-<b><h1>HTTP</h1></b>
+<h1>HTTP</h1>
 
 - What are the common request types associated with RESTful routing?
 
@@ -92,7 +92,7 @@ https
 
 [google scheme]
 
-<b><h1>Sinatra</h1></b>
+<h1>Sinatra</h1>
 
 - What is sinatra?
 
@@ -126,13 +126,65 @@ Rack
 
 ? A method override is used to perform a different function aside from the standard functionaliy. We would need to use it when using BCrypt so that we might be able to authenticate a user's password.
 
-<b><h1>Sessions</h1></b>
+<h1>Sessions</h1>
 
 - What are sessions?
+
+? Sessions are cookies that enable certain data to be accessible by certain users.
+
 - Why do we need to use sessions?
+
+? We need to use sessions so that we can enable users to obtain the data that is unique to them.
+
 - What types of data can be stored in session?
+
+? A session can store strings and even objects. It can be used to store a user's id so that we may enable that user to access their data.
+
 - What types of things should we not store in session?
+
+? Objects
+
 - How is the session passed from the server to the client?
+
+? The session is passed from the server to the client by
+
+<h1>Authentication</h1>
+
+- What is authentication?
+
+Authentication is matching a user's inputted data with the data that that user might have within the server so that the user might be able to access more of their unique data within the server.
+
+- Why do we need it?
+
+We need authentication so that a user's private data would not be accessed by anyone else besides that user.
+
+- How do we authenticate a user?
+
+We authenticate a user by finding their username or e-mail address, and checking to see if the password that is inputted matches the BCrypted password.
+
+<h1>BCrypt</h1>
+
+- What is BCrypt?
+
+BCrypt is a functionality that hashes passwords so that we do not store plain text passwords within our database.
+
+- Why do we need it?
+
+We need BCrypt so that we do not store plain text passwords within our database.
+
+- Why should we never store plain text passwords in the database?
+
+We should never store plain text passwords within the database because that would be a security hazard. Users have private data stored within the server, so it's important that we have security measures ensured so that that data remains private.
+
+- The BCrypt methods that we write, what do they do for us?
+
+We write two methods: a setter and a getter. The setter method is called upon on registration. It takes the plain text password and creates a new password object by adding a salt to the plain text password and hashing it. That hashed password is then stored as a string within the database.
+
+? The getter method is called upon when a user logs in, using authintication. The string version of the hashed password that is saved in the database is placed within the Password.new function, which can only take in string versions of a hashed password. The plain text is compared with this hashed password using a double equal comparison that works as a method override from its standard usage.
+
+- When we authenticate a user, how are we able to compare the plaintext password with the encrypted one stored in the database?
+
+? The getter method is called upon when a user logs in, using authintication. The string version of the hashed password that is saved in the database is placed within the Password.new function, which can only take in string versions of a hashed password. The plain text is compared with this hashed password using a double equal comparison that works as a method override from its standard usage.
 
 
 <h1>Javascript</h1>
