@@ -124,7 +124,7 @@ Rack
 
 - What is a method override and why do we need to do it?
 
-? A method override is used to perform a different function aside from the standard functionaliy. We would need to use it when using BCrypt so that we might be able to authenticate a user's password.
+? A method override is used to perform a different function aside from the standard functionaliy. We would need to use it when using BCrypt so that we might be able to authenticate a user's password. We would also use it when using a form that upon submission would make a request other than a GET or a POST
 
 <h1>Sessions</h1>
 
@@ -212,7 +212,7 @@ We fully secure an application by placing authorize methods within routes that s
 
 - What is HTML?
 
-HTML is a language that is used as a standard for rendering web pages and web apps.
+HyperText Markup Language is a language that is used as a standard for rendering web pages and web apps.
 
 - Why do we use it?
 
@@ -224,19 +224,19 @@ The effect of adding a label to various form elements is allowing users to know 
 
 - How and why would you use the alt attribute?
 
-? We would use the alt attribute by adding alt and setting it to the words that we would want to display. We would use the alt attribute as alternative text that a user may see if other text may be unrenderable
+We would use the alt attribute by adding alt and setting it to the words that we would want to display. We would use the alt attribute as alternative text that a user may see if other text may be unrenderable
 
 - How and why would you use the tabindex attribute?
 
-? One would use the tabindex attribute by adding it to a tag on a form and assigning a value to it. We would use it so as to make entering data easier for a user, so that when a user inputs information they may get to the next portion of the form by pressing tab.
+One would use the tabindex attribute by adding it to a tag on a form and assigning a value to it. We would use it so as to make entering data easier for a user, so that when a user inputs information they may get to the next portion of the form by pressing tab.
 
 - How and why would you use the title attribute?
 
-? One would use the title attribute by adding the title to a tag and assigning the value. We would use the title attribute to specify extra information
+One would use the title attribute by adding the title to a tag and assigning the value. We would use the title attribute to specify extra information
 
 - What are common use cases for the meta element?
 
-? The meta element is used for explaining what data is used for using data
+The meta element is used for explaining what data is used for using data
 
 - What is the difference in how inline and block elements display?
 
@@ -293,20 +293,70 @@ Some HTML tags might not be supported, depending on the version. If the version 
 <h1>CSS</h1>
 
 - What is CSS?
+
+Cascading Style Sheets is a language that is used to design and style HTML
+
 - What does it allow us to do?
+
+It allows us to design and style a web page or an app so that it may be more presentable
+
 - What is the box model?
+
+The box model is a principle that is followed when using CSS. It follows the thought process that all HTML elements are boxes, and when styling it we may nest the boxes in a way that is more visually appealing. The outermost box is the margin, followed by the border, padding, and right in the center is the content.
+
 - How is the box size calculated?
+
+? The box size is calculated using pixels
+
 - What is the difference between margin and padding?
+
+Margin is the amount of space defined for the surroundings of an element. Padding is the space within an element
+
 - Which box model properties apply to block, inline, inline-block elements?
+
+Display
+
 - What is the default positioning for elements?
+
+Static
+
 - What are the differences in static, relative, absolute, and fixed positioning?
+
+Static: default; positioned according to the flow of the page
+
+Relative: positioned relative to its normal position; setting a left property by 30px will move it 30px away from its normal position
+
+Absolute: positioned relative to its nearest possible positioned ancestor; if no positioned ancestors, will be positioned relative to the document body and will remain tacked to the same spot as if its position were fixed
+
+Fixed: positioned relative to the viewport; will remain in the same position as the page scrolls down
+
 - How do floats effect positioning?
+
+Floats effect positioning by placing the element that has the float property along the left or right side of an element and wrapping text or inline elements about it
+
 - What are the benefits of responsive design?
+
+The benefits of responsive design are that a user can change the size of their window and still view the page without any hindrances, and additionally it would give the option to view the web page on a mobile device.
+
 - What is the relationship between relatively positioned and absolutely positioned elements?
+
+An absolutely positioned element would be positioned relative to a relatively positioned element if the relatively positioned element were an ancestore
+
 - How do you define inline styles?
+
+Inline styles are lines that are added to a document that defines HTML that apply style
+
 - Why is it best to avoid inline styles?
+
+It is best to avoide inline styles because the lines are hardcoded into the HTML document, and in order to apply the styles consistently we would need to apply those lines throughout the document. It would be much easier to define those styles that apply to whichever elements using CSS.
+
 - How do we link an external style sheet?
+
+We link an exzternal style sheet using a link tag that includes the path of the CSS document
+
 - What are some common css selectors?
+
+#id and .class, as well as the name of the tag
 
 <h1>Javascript</h1>
 
@@ -450,22 +500,67 @@ Bind returns a new function, allowing you to pass in a this array and any number
 <h1>jQuery</h1>
 
 - What is jQuery?
+
+jQuery is a Javascript library that selects HTML and XML elements on a webpage
+
 - What does it allow us to do?
+
+jQuery allows us to manipulate the DOM
+
 - What are the common types of selectors we can use?
+
+$("#id") and $(".class")
 
 <h1>Event Handling</h1>
 
 - What are events?
+
+Events are actions that the web page performs when the user interacts with the page
+
 - How/Why do we bind events?
+
+We bind events by specifying which element on the web page is performing the event and perform a request and a response.
+
+We bind events because we would need to perform that request and manipulate the DOM based on the response that we receive.
+
 - What is event bubbling?
+
+Event bubbling is when an event is attempted to be bound, but the response that is meant to manipulate the DOM based off of that binding is not performed in the way that was intended. Instead the response manipulates several elements in the DOM, likely the parents and ancestors of the element that was originally intended to be manipulated.
+
 - What is event delegation?
+
+Event delegation is when an event handler is set up at a higher level. Rather than handling the event selecting a single element on the web page, a parent or ancestor is also selected to handle the event more specifically.
+
 - Why do we need to delegate events?
+
+We need to delegate events so that all elements on the webpage that we bind events to perform their intended functions regardless of whether or not they are on the web page when the document is ready.
 
 <h1>AJAX</h1>
 
 - What is AJAX?
+
+AJAX is a tool that utilizes objects in HTMLand/or XML that enables those who utilize AJAX to manipulate the DOM when the client makes requests and receives responses. Using AJAX will prevent the default state of HTTP requests and responses from occurring. Instead the user will be kept on the same page as AJAX deals with the requests and response objects, manipulating the DOM as requests are made and responses are sent.
+
 - What are the benefits of an AJAX request vs reloading the whole page?
+
+? The benefits of an AJAX request are that it provides a much smoother and quicker user experience, enabling the user to submit data and interact with the webpage instead of being directed to multiple pages.
+
 - What is the $.ajax() jQuery method actually doing for us?
+
+$.ajax() is performing an HTTP request, but in an "asynchronous" way, or in its own speed.
+
 - What are the common options that can be sent to the $.ajax() jQuery method and what are they used for?
+
+Method: the type of request that the request being sent is
+
+URL: the path of the request that is being sent
+
+Data: the data that is being sent within the request if the user is inputting data
+
 - When does the done / error callback actually execute?
+
+? The done/error callback executes after the request has been made and the response has been sent
+
 - How do we know that we've made an ajax request in our controller?
+
+? We know that we've made an ajax request in our controller when the response sends back data upon the done/error callback
