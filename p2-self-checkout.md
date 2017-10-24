@@ -467,54 +467,61 @@ function(name, age, favoriteCartoon) {
 
 ? One would add functions to a constructor function's prototype by defining an attribute and having it equalled to a callback function. For example:
 
-function(name, age, favoriteCartoon) {
+var Constructor = function(name, age, favoriteCartoon) {
   this.name = name;
   this.age = age,
   this.favoriteCartoon = favoriteCartoon;
-  this.favoriteIceCreamFlavor = function(flavor) {
-    return flavor
-  }
 };
+
+Constructor.prototype.favoriteIceCreamFlavor = function(flavor) {
+    return flavor
+  };
 
 - What is an object literal?
 
-? An object literal is an object that is defined in simplest terms. It is set to a variable, and it is equal to curly braces, and within the curly braces are the object's attributes that are defined in key-value pairs.
+An object literal is an object that is defined in simplest terms. It is set to a variable, and it is equal to curly braces, and within the curly braces are the object's attributes that are defined in key-value pairs.
 
 - When do we use an object literal vs a contructor function?
 
-? We would use an object literal if we just needed that one object at a given moment. We would use constructor functions if we would need to make multiple instances of that object.
+We would use an object literal if we just needed that one object at a given moment. We would use constructor functions if we would need to make multiple instances of that object.
 
 - What is a callback function and how do we use it?
 
-? A callback function is an anonymous function, or unnamed function, that we would use to perform specific tasks within a named function.
+ A callback function is an anonymous function, or unnamed function, that we would use to perform specific tasks within a named function.
 
 - What is a closure and how do we use it?
 
 ? (What) A closure is the combination of a function and the lexical environment within which that function was declared.
 
+[Scope changes within a closure]
+
 - How is scope determined in JavaScript?
 
 ? Scope is determined in javascript by what data is accessible by which function.
 
+[Scope changes across function; function level scope]
+
 - What is a higher-order function?
 
-? A higher-order function is a function that takes a function as a parameter and may return a function as a result
+A higher-order function is a function that takes a function as a parameter and may return a function as a result
 
 - What does it mean for a function to be a 'first-class citizen'?
 
 ? A function that is a first-class citizen is a function that may be accessed by anything within the program
 
+[can pass functions around as data]
+
 - Can you write a function that returns a function?
 
-? Yes, these are called higher-order functions
+Yes, these are called higher-order functions
 
 - What type of scope is used JavaScript?
 
-? Local and global
+Function scope
 
 - What is this?
 
-? This is similar to self in Ruby; this is referencing the object in which the current scope is within
+This is similar to self in Ruby; this is referencing the object in which the current scope is within
 
 - What are the methods call, apply, and bind used for?
 
@@ -524,7 +531,7 @@ Bind returns a new function, allowing you to pass in a this array and any number
 
 - What is variable shadowing?
 
-? Variable shadowing is when a variable within one scope has the same name as a variable within another scope.
+Variable shadowing is when a variable within one scope has the same name as a variable within another scope.
 
 <h1>jQuery</h1>
 
@@ -574,6 +581,8 @@ AJAX is a tool that utilizes objects in HTMLand/or XML that enables those who ut
 
 ? The benefits of an AJAX request are that it provides a much smoother and quicker user experience, enabling the user to submit data and interact with the webpage instead of being directed to multiple pages.
 
+[Only receiving and sending small bits of data]
+
 - What is the $.ajax() jQuery method actually doing for us?
 
 $.ajax() is performing an HTTP request, but in an "asynchronous" way, or in its own speed.
@@ -590,6 +599,10 @@ Data: the data that is being sent within the request if the user is inputting da
 
 ? The done/error callback executes after the request has been made and the response has been sent
 
+[done vs error; done will have 200 status and any 400 or 500 level status will lead to the fail]
+
 - How do we know that we've made an ajax request in our controller?
 
 ? We know that we've made an ajax request in our controller when the response sends back data upon the done/error callback
+
+[if the request header has X-Requested-With:XMLHttpRequest a part of it; request.xhr?]
